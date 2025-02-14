@@ -80,7 +80,6 @@ let [refresh,setRefresh]=useState(false)
     })
       .then((r) => {
         console.log(r.data.res);
-        setallLeave(r.data.res);
         getAllLeave();
         setRefresh(false)
       })
