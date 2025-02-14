@@ -31,6 +31,28 @@ export const HrmReducer=(state=initialstate,{type,payload})=>{
               isAuth: true,
             };
           }   
+
+          case types.LOGOUT_ERROR: {
+            return {
+              ...state,
+              isError: true,
+              isLoading: false,
+            };
+          }
+          case types.LOGOUT_LOADING: {
+            return {
+              ...state,
+              isLoading: true,
+            };
+          }
+        case types.LOGOUT_SUCCESS: {
+            return {
+              ...state,
+              user: {},
+              isLoading: false,
+              isAuth: false,
+            };
+          }
           default: {
             return state;
           }
