@@ -137,6 +137,7 @@ let [refresh,setRefresh]=useState(false)
             <Table size="sm" fontSize="20px">
               <Thead>
                 <Tr height="50px">
+                  
                   <Th>LEAVE TYPE</Th>
                   <Th>START DATE</Th>
                   <Th>END DATE</Th>
@@ -174,6 +175,7 @@ let [refresh,setRefresh]=useState(false)
             <Table size="sm" fontSize="20px">
               <Thead>
                 <Tr height="50px">
+                <Th>Email</Th>
                   <Th>LEAVE TYPE</Th>
                   <Th>START DATE</Th>
                   <Th>END DATE</Th>
@@ -186,6 +188,7 @@ let [refresh,setRefresh]=useState(false)
               <Tbody>
                 {allLeave.length && allLeave?.map((item, i) => (
                   <Tr key={i} height="50px">
+                    <Td>{item.userId?.email}</Td>
                     <Td>{item.leaveType}</Td>
                     <Td>{formatDateWithoutTime(item.startDate)}</Td>
                     <Td>{formatDateWithoutTime(item.endDate)}</Td>
